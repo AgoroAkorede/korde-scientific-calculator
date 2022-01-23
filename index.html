@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <div id="navbar" class="navbar">
+             <button id="standard-button">Standard </button> 
+            <button id="scientific-button">Scientific </button> 
+        
+    </div>
+    <div class="calculator">
+        <div class="calculator_display">
+            <div data-previous class="display_previous"></div>
+            <div data-current class="display_current"></div>
+        </div>   
+   
+        
+        <div id="calculator-body" class="calculator_keys">
+         
+            <button data-percentage>%</button>
+            <button data-clearAll>CE</button>
+            <button data-clear>C</button>
+            <button id="delete-btn" data-delete>DEL</button>
+            <button class="scientific" data-inverse>1/X</button>
+            <button class="scientific" data-square>X <sup>2</sup></button>
+            <button class="scientific" data-cube>X <sup>3</sup></button>  
+            <button class="scientific" data-squareRoot>X <sup>1/2</sup><button>
+            <button class="scientific" data-pi>pi</button>
+            <button class="scientific" data-exponential>e</button>
+            <button class="scientific" data-modulus>|x|</button>
+            <button class="scientific" data-logarithm>log x</button>
+            <button class="scientific" data-factorial>x!</button>
+            <button class="scientific" data-cos>cos</button>
+            <button class="scientific" data-sin>sin</button>
+            <button class="scientific" data-tan>tan</button>
+            <button data-operation class="operand">/</button>
+            <button data-operation class="operand">X</button>
+            <button data-operation class="operand">-</button>
+            <button data-operation class="operand">+</button>
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button data-number>6</button>
+            <button data-number>5</button>
+            <button data-number>4</button>
+            <button data-number>3</button>
+            <button data-number>2</button>
+            <button data-number>1</button>
+            <button data-number>0</button>
+            <button data-bracket-open>(</button>
+            <button data-bracket-close>)</button>
+            <button data-sign>±</button>
+            <button data-number>.</button>
+            <button id="btn-equals" data-equals>=</button>
+
+    </div>
+    
+       
+ </div>
+ <section>
+     <div id="others" class="others">
+         <h1 id="history" class="history"> History 
+         </h1>
+        
+     </div>
+ </section>
+
+    
+</body>
+<script src="script.js"></script>
+</html>
