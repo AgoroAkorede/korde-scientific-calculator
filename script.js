@@ -47,8 +47,8 @@ const addToHistory = function (value) {
   <h1 id="history" class="history">History
       <div class="active">  </div>
 </h1>
-  <div id="history_content" class="history_content">  ${historyAnswerValue ? historyAnswerValue : history}  <br></br> </div> 
-
+  <div id="history_content" class="history_content">  ${historyAnswerValue ? historyAnswerValue : history}  <br></br> </div>
+  
   <img src="delete.png" alt="deleteImg" class="deleteImg" id="deleteImg">
 `
   historyContainer.innerHTML = "";
@@ -261,9 +261,17 @@ scientificBtn.addEventListener('click', () => {
   scientificBtns.forEach(button => {
     button.classList.remove('scientific')
   })
+  if (screen.width >= 280  && screen.width <= 540) {
+    const calculatorBody = document.querySelector('.calculator_keys')
+    calculatorBody.style. gridTemplateColumns = "repeat(4, minmax(5rem,max-width))";
+    calculatorBody.style.gridTemplateRows = 'repeat(3,minmax(5rem,max-width) )';
+    console.log('not working yet');
+  }
+  
   const calculatorBody = document.querySelector('.calculator_keys')
   calculatorBody.style. gridTemplateColumns = "repeat(5, minmax(3.5rem,7rem))";
-  calculatorBody.style. gridTemplateRows = 'repeat(6, minmax(3.5rem,7rem))';
+  calculatorBody.style.gridTemplateRows = 'repeat(6, minmax(3.5rem,7rem))';
+  
 })
 standardBtn.addEventListener('click', () => {
   const scientificBtns = [ inverseButton, squareButton, squareRootButton, btnCube, btnPi, btnExponential, btnFactorial, btnPi, btnModulus, btnLogarithm,
@@ -272,6 +280,12 @@ standardBtn.addEventListener('click', () => {
   scientificBtns.forEach(button => {
     button.classList.add('scientific')
   })
+  if (screen.width===280) {
+    const calculatorBody = document.querySelector('.calculator_keys')
+    calculatorBody.style. gridTemplateColumns = "repeat(4, 4rem)";
+    calculatorBody.style.gridTemplateRows = 'repeat(3,4rem )';
+    console.log('not working yet');
+  }
   const calculatorBody = document.querySelector('.calculator_keys')
   calculatorBody.style. gridTemplateColumns = "repeat(4, minmax(3.5rem,7rem))";
   calculatorBody.style. gridTemplateRows = 'repeat(4, minmax(3.5rem,7rem))';

@@ -285,8 +285,56 @@ button.operand{
 .navbar button:hover,.navbar button:active{
     box-shadow:0px 15px 30px grey ;
 }
+.backspace{
+    height:1rem;
+}
 
-@media only screen and (max-width:700px){
+.calculator_keys button {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (max-width:18.75em){
+    .others{
+        display: none;
+    }
+    /* .calculator_keys{
+        min-height: 60vh;
+        min-width: 60vw;
+        grid-template-columns: repeat(4, 5rem);
+        grid-template-rows: repeat(4,5rem); 
+       
+    } */
+    
+    .navbar button{
+        padding: 1rem;
+        /*border: transparent;
+        */border-radius: 20px;
+        font-size: 1.3rem;
+        width: 3rem;
+        margin-left: 0.25rem;
+    }
+}
+
+@media (max-width:31.25em){
+    .others{
+        display: none;
+    }
+    /* .calculator_keys{
+        min-height: 80vh;
+        min-width: 80vw;
+        grid-template-columns: repeat(4, 4rem);
+        grid-template-rows: repeat(4, minmax(3rem,7rem));
+       
+    } */
+}
+
+
+
+@media (max-width:43.75em){
     .others{
         display: none;
     }
@@ -307,8 +355,8 @@ button.operand{
          margin-left: 0.25rem;
     }
     .calculator_keys{
-        grid-template-columns: repeat(3, 3.5rem);
-        grid-template-rows: repeat(4,3rem);
+        grid-template-columns: repeat(4, minmax(5rem,max-width));
+        grid-template-rows: repeat(4, minmax(5rem,max-width));
 
     }
     
