@@ -294,8 +294,16 @@ button.operand{
     justify-content: center;
     align-items: center;
 }
-
-
+.history-mobile{
+    height: 4rem;
+    border: transparent;
+    display: none;
+    width:4rem;
+}
+.history-mobile-class{
+    height: 2.5rem;
+    color: rgb(78, 77, 77);
+}
 
 @media (max-width:18.75em){
     .others{
@@ -337,6 +345,15 @@ button.operand{
 @media (max-width:43.75em){
     .others{
         display: none;
+    }
+    .history-mobile{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        position: absolute;
+        top:10%;
+        right:10%;
+
     }
     .navbar{ 
     display: flex;

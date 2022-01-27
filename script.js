@@ -44,14 +44,15 @@ const addToHistory = function (value) {
   historyArr.push(historyAnswerValue)
  for (let i = 0; i < historyArr.length; i++){
     const markup =  `
-  <h1 id="history" class="history">History
+    <h1 id="history" class="history">History
       <div class="active">  </div>
 </h1>
   <div id="history_content" class="history_content">  ${historyAnswerValue ? historyAnswerValue : history}  <br></br> </div>
   
   <img src="delete.png" alt="deleteImg" class="deleteImg" id="deleteImg">
 `
-  historyContainer.innerHTML = "";
+historyContainer.innerHTML = "";
+
 
   historyContainer.insertAdjacentHTML("afterbegin", markup);
   }
@@ -66,10 +67,18 @@ const addToHistory = function (value) {
 
     <img src="delete.png" alt="deleteImg" class="deleteImg" id="deleteImg">
   `
-        
-    historyContainer.innerHTML = " ";
-    historyContainer.insertAdjacentHTML("afterbegin", markup);
-      
+        if(screen.width>=700){  historyContainer.innerHTML = " ";
+        historyContainer.insertAdjacentHTML("afterbegin", markup);
+      }
+        else {
+          const historyMobile = document.getElementById('history-mobile')
+            historyMobile.addEventListener('click', () => {
+            others.innerHTML = markup
+            console.log('working shit')
+            console.log(historyAnswerValue);
+             
+          })
+      } 
     })
  
   // const historyContent = document.getElementById('history_content')
@@ -78,6 +87,7 @@ const addToHistory = function (value) {
   //  };
 
 }
+  
 class Calculator{
     constructor(previousOperandTextElement, currentOperandTextElement) {
         this.previousOperandTextElement = previousOperandTextElement
